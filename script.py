@@ -26,8 +26,7 @@ def schedule_job():
     logger.info("Logging via schedule job")
 	
 
-#schedule.every(1).minutes.do(schedule_job)
-schedule_job()
+schedule.every(1).minutes.do(schedule_job)
 
 while True:
     schedule.run_pending()
